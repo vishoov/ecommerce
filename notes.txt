@@ -1,0 +1,86 @@
+
+
+E-Commerce Backend API using nodejs
+
+TechStack:
+
+	Runtime :NodeJs
+`	Routing: Express.js
+	Auth : Json Web Token
+	Pass Encryption : bcrypt
+	DB: MongoDB and Atlas
+	Api Testing: PostMan
+	Deployment : vercel and github
+	Data Modelling : Mongoose
+
+Security:
+
+	> Server Protection : CORS
+	> API : JWT - promotes RESTful API
+	> Pass Security: bcrypt
+	> DB Security : Server IP address validation
+
+
+Routes :
+
+Authorizations steps
+
+User Management -> signup, login, profiles, update profiles, logout 
+
+
+Product Management: Create products, get, name, categories, updating 
+
+Order Management - orders, creating orders, payment options, update the orders (status)
+
+Review Management: write a review, get reviews on product, delete reviews 
+
+
+MVC Structure, Error handling, Async JS
+
+
+
+Schemas
+
+Name
+Email
+Contact
+Address
+Reviews
+Orders
+Searched products 
+
+
+Products 
+ Names
+Price
+Stock
+Rating
+Category
+Photos
+
+
+
+Review
+
+Name
+text
+
+
+
+
+
+
+Ecommerce api’s 
+
+
+Navbar
+Header section, 
+Category products, 
+Ads, posters, 
+Forms, 
+Newsletter,
+login/signup pages
+Search page
+
+
+
