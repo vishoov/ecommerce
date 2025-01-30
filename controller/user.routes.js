@@ -44,7 +44,7 @@ router.post("/register", async function(req, res){
 
       
 
-        res.status(201).json({message:"User Registration Success", token:token});
+        res.status(201).send({message:"User Registration Success", token:token});
     
 
 

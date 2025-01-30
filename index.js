@@ -7,8 +7,10 @@ import userRoutes from "./controller/user.routes.js";
 app.use(express.json());
 import productRoutes from "./controller/product.routes.js";
 import orderRoutes from "./controller/order.routes.js";
+import bodyParser from "body-parser";
 
-
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended:true}));
 mongoose.connect(process.env.MONGO_URL)
 .then(()=>{
     console.log("Connected to MongoDB")
