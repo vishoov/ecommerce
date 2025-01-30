@@ -5,7 +5,7 @@ E-Commerce Backend API using nodejs
 TechStack:
 
 	Runtime :NodeJs
-`	Routing: Express.js
+	Routing: Express.js
 	Auth : Json Web Token
 	Pass Encryption : bcrypt
 	DB: MongoDB and Atlas
@@ -84,3 +84,35 @@ Search page
 
 
 
+Implementing Cart 
+
+Browsing a product, 
+
+product Id, Quantity 
+user info 
+
+
+Place An Order
+
+orders/place ->fetch the cart from the current user-> add items from cart -> calculate total Price
+-> create a new Order in DB -> return the response of success!
+
+
+Request for Order
+
+{
+    "user": "6797b9b3984302a745899423",
+    "orderItems": [
+        {
+            "product": "67990797ba104508599e0424",
+            "quantity": 2
+        }
+    ],
+    "shippingAddress": {
+        "city": "delhi",
+        "address": "123, jane street, bihar",
+        "postalCode": "110002",
+        "country": "Uganda"
+    },
+    "paymentMethod": "Credit Card"
+}

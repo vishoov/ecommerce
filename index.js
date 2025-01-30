@@ -5,6 +5,9 @@ dotenv.config();
 import mongoose from "mongoose";
 import userRoutes from "./controller/user.routes.js";
 app.use(express.json());
+import productRoutes from "./controller/product.routes.js";
+import orderRoutes from "./controller/order.routes.js";
+
 
 mongoose.connect(process.env.MONGO_URL)
 .then(()=>{
@@ -16,7 +19,8 @@ mongoose.connect(process.env.MONGO_URL)
 
 
 app.use("/users", userRoutes);
-
+app.use("/products", productRoutes);
+app.use("/orders", orderRoutes);
 
 app.get("/", (req, res) => {
     res.send("Welcome to the Root route of e-commerce API")

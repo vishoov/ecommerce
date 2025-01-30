@@ -55,7 +55,7 @@ userSchema.pre("save", async function(next){
         }    
         
         const salt = await bcrypt.genSalt(12);
-        hashedPass= await bcrypt.hash(user.password, salt);
+        const hashedPass= await bcrypt.hash(user.password, salt);
         
         user.password = hashedPass;
         next();
@@ -64,6 +64,18 @@ userSchema.pre("save", async function(next){
         res.send(err);
     }
 })
+
+
+// password decryption
+userSchema.methods.comparePassword = async function(password){
+    try{
+        return await bcrypt.compare(password, this.password);
+
+    }
+    catch(err){
+        throw new Error("Error Comparing Passwords");
+    }
+}
 
 const User = mongoose.model("User", userSchema);
 
